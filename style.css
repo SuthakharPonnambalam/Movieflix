@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: #151515;
+    position: sticky;
+    top: 0;
+}
+.navbar-container{
+    display: flex;
+  align-items: center;
+  padding: 0 50px;
+  height: 100%;
+  color: white;
+  font-family: "Sen", sans-serif;
+}
+
+.logo-container{
+    flex: 1;
+}
+
+.logo{
+    font-family: 'Sen', sans-serif;
+    font-size: 40px;
+    color: #4dbf00;
+}
+.menu-container{
+    flex: 6;
+}
+.menu-list{
+    display: flex;
+    list-style-type: none;
+}
+.menu-list-item{
+    margin-right: 30px;
+
+}
+
+.menu-list-item .active{
+    font-weight: bold;
+}
+
+.profile-container{
+    display: flex;
+    flex: 2;
+    align-items: center;
+    justify-content: flex-end;
+}
+.text-container{
+    margin: 0 20px;
+}
+.profile-picture{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sidebar{
+    background-color: black;
+    height: 100%;
+    width: 50px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    align-items: center;
+}
+
+.left-menu-icons{
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+.toggle{
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.toggle-ball{
+    height: 18px;
+    width: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s ease all;
+}
+
+.toggle-icon{
+    color: goldenrod;
+}
+
+.container{
+    background-color:#151515;
+    min-height: calc(100vh - 50px);
+    color: white;
+
+}
+
+.content-container{
+    margin-left: 50px;
+}
+
+.featured-content{
+    height: 50vh;
+    padding: 50px;
+}
+
+.featured-title{
+width: 200px;
+
+}
+
+.featured-text{
+    width: 500px;
+    color: gray;
+    margin: 40px 0px;
+}
+
+.featured-button{
+    background-color: #4dbf00;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+
+.movie-list-container{
+    padding: 10px 20px;
+   
+}
+
+.movie-list-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.main-movie-list{
+    display: flex;
+    align-items: center;
+    height: 300px;
+    transform: translate(0);
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item{
+    margin-right: 30px;
+   position: relative;
+}
+
+.movie-list-item:hover .movie-list-item-image{
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+.movie-list-item-image{
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+    border-radius: 20px;
+}
+
+.movie-list-item-title{
+    background-color: #333;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item-desc{
+    background-color: #333;
+    padding:10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 230px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item-button{
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border-style: none;
+    background-color: #4dbf00;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button{
+    opacity: 1;
+}
+
+.arrow{
+    font-size: 120px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    color: lightgray;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.container.active{
+    background-color: #fff;
+}
+
+.movie-list-title.active{
+    color: #111;
+}
+
+.navbar-container.active{
+    background-color: #fff;
+    color: #111;
+}
+
+.sidebar.active{
+    background-color: #fff;
+}
+
+.left-menu-icons.active{
+    color: #111;
+}
+
+.toggle.active{
+    background-color: #111;
+}
+
+.toggle-ball.active{
+    background-color: #fff;
+    transform: translateX(-20px);
+}
+
+@media only screen and (max-width: 940px){
+    .menu-container{
+        display: none;
+    }
+}
